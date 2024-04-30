@@ -1,6 +1,6 @@
 {
   "name": "libnut",
-  "version": "2.7.1-1",
+  "version": "2.7.1-0",
   "description": "libnut is an N-API module for desktop automation with node",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -42,7 +42,7 @@
     "node-addon-api": "7.1.0"
   },
   "optionalDependencies": {
-    "@nut-tree/node-mac-permissions": "2.2.1"
+    "@kirillvakalov/nut-tree__node-mac-permissions": "2.2.1-0"
   },
   "engines": {
     "node": ">=10.15.3"
