@@ -8,6 +8,8 @@ if (process.env.CI) {
   const arch = process.platform === "linux" && process.arch === "arm64" ? "_arm64" : "";
   const plattformPackageName = `@kirillvakalov/nut-tree__libnut-${process.platform}${arch}`;
   packageJson.name = plattformPackageName;
+  packageJson.os = [process.platform];
+  packageJson.cpu = process.platform === "darwin" ? ["arm64", "x64"] : [process.arch];
 
   try {
     fs.writeFileSync(filename, JSON.stringify(packageJson, null, 2));
