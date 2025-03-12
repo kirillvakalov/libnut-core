@@ -5,7 +5,8 @@ if (process.env.CI) {
   const filename = join(__dirname, "package.json");
   const packageJson = require(filename);
 
-  const plattformPackageName = `@kirillvakalov/nut-tree__libnut-${process.platform}`;
+  const arch = process.platform === "linux" && process.arch === "arm64" ? "_arm64" : "";
+  const plattformPackageName = `@kirillvakalov/nut-tree__libnut-${process.platform}${arch}`;
   packageJson.name = plattformPackageName;
 
   try {
